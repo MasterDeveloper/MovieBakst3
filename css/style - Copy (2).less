@@ -222,7 +222,10 @@ ______________________*/
 	}
 }
 .logo-wrap{
-	margin:16px 0 14px;
+	margin:20px 0 10px;
+	> div{
+		margin:15px 0;
+	}
 }
 
 .login-section{
@@ -292,7 +295,7 @@ ______________________*/
 			background:white;
 			border:1px solid #c4bfbf;
 			padding:3px;
-			margin-bottom:6px;
+			margin-bottom:7px;
 			.feature-img{
 				margin-bottom:0;
 			}
@@ -477,37 +480,6 @@ ______________________*/
 		}
 	}
 }
-
-.rtl{
-	.crew-section{
-		
-		.details-list{
-			span{
-				&:first-child{
-					padding-right:0;
-					padding-left:20px;
-				}
-			}
-			em{
-				padding-right:0;
-				padding-left:20px;
-			}
-		}
-		.details-list-2{
-			span{
-				&:first-child{
-					padding-right:0;
-					padding-left:20px;
-				}
-			}
-			em{
-				padding-right:0;
-				padding-left:20px;
-			}
-		}
-	}
-}
-
 /**********************
 	 Theme Box
  **********************/
@@ -627,13 +599,6 @@ ______________________*/
 		margin-bottom:2em;
 	}
 }
-.rtl .left-img-section{
-	img{
-		float:right;
-		margin: 0 0 10px 20px;
-	}
-	
-}
 .details-wrap{
 	h3{
 		color:#666;
@@ -687,30 +652,7 @@ ______________________*/
 .theme-tabs-wrap{
 	margin-bottom:25px;
 }
-.rtl{
-	.nav-tabs {
-		&.green-tabs{
-			> li{
-				> a{
-					&:before{
-						background:url(../images/tab-right-1-rtl.png) no-repeat;
-						left:auto;
-						right:100%;
-					}
-				}
-				&.active{
-					> a:focus,
-					> a:hover,
-					> a{
-						&:before{
-							background:url(../images/tab-right-rtl.png) no-repeat;
-						}
-					}
-				}
-			}
-		}
-	}
-}
+
 .nav-tabs {
 	border-bottom:none;
 	> li{
@@ -1018,24 +960,11 @@ ______________________*/
 }
 
 }
-.rtl{
-	.slider-wrap-2{
-		.bx-wrapper{
-			direction:ltr;
-		}
-	}
-}
 .slider-wrap-2{
 	position:relative;
 	.bx-wrapper{
 		margin:0 auto;
 	}
-	.block-header{
-		display:block;
-		margin-right:40px;
-		margin-bottom:7px;
-	}
-	
 	.slider-caption{
 		position:absolute;
 		left:0;
@@ -1185,13 +1114,6 @@ ______________________*/
 		padding:6px 20px 7px 0;
 	}
 }
-.rtl{
-	.box-header{	
-		&.with-icon{
-			padding:6px 0 7px 20px;
-		}
-	}
-}
 .box-body{
 	padding:0 10px;
 }
@@ -1232,7 +1154,6 @@ ______________________*/
 .movies-thumbs{
 	margin-right:-17px;
 	position:relative;
-	text-align:center;
 	a{
 		position:relative;
 		display:inline-block;
@@ -1243,7 +1164,6 @@ ______________________*/
 	}
 	.caption{
 		position:absolute;
-		text-align:left;
 		left:6px;
 		right:6px;
 		bottom:6px;
@@ -1353,11 +1273,6 @@ ______________________*/
 		}
 	}
 }
-.rtl .slider-wrap .box-header{
-	left:auto;
-	right:0;
-	direction:rtl;
-}
 .slider-wrap{
 	.bx-wrapper .bx-controls-direction a{
 		text-indent:inherit;
@@ -1409,17 +1324,11 @@ ______________________*/
 		}
 	}
 }
-
-.slider-wrap-2 .block-header{
-	margin-right: 0;
-	margin-left:40px;
-}
 .slider-wrap-2{
 	padding:6px;
 	margin:0 0 10px;
 	background:white;
-	border:1px solid #e4e4e4;
-	.box-shadow(0 0 3px rgba(0,0,0,0.15));
+	border:1px solid;
 	.bx-wrapper{
 		.bx-viewport{
 			border:none;.box-shadow(none);
@@ -1720,19 +1629,23 @@ ______________________*/
 		margin-bottom:0;
 	}
 }
-.rtl .border-list li{
-	padding:8px 60px 8px 10px;
-	&:before{
-		left:0;
-		margin-right: 0;
-		margin-left:15px;
-		right:10px;
-	}
-}
+
 .rtl .icons-list{
+	list-style:none;
 	margin:0;
 	ul{
+		list-style:none;
 		padding:0;
+	}
+	li{
+		&:before{
+			background:url(../images/icon-list.png) no-repeat 0 0;
+			width:16px;
+			height:15px;
+			font-family: 'FontAwesome';
+			margin-left:10px;
+			margin-right:0;
+		}
 	}
 }
 
@@ -1905,35 +1818,12 @@ h3{
 .logo{
 	display:block;
 	width:200px;
-	position:relative;
-	z-index:999;
-	margin-top:5px;
 }
-.navbar{
-	z-index:1;
-}
-h1{
-	font-size:40px;
-}
-
-.banner-wrap .inner-section{
-	padding:20px 0 10px;
-}
-.banner-wrap .inner-section h2{
-	font-size: 25px;
-}
-
 .login-section{
 	padding:8px;
 }
-.logo-wrap{
-	margin:12px 0 4px;
-}
 .navbar > .container .navbar-brand{
 	width:200px;
-}
-.navbar .navbar-nav > li > a{
-	padding:7px 12px;
 }
 /***********************
 	buttons Setting
@@ -1945,61 +1835,38 @@ h1{
 	}
 }
 
-
-.banner-wrap .theme-box{
-	margin-top:7px;
-}
-.search-wrap .btn-lg, .search-wrap .input-lg{
-	.radius(6px);
-}
-
-
-
-
 /***************************************
 	nav tabs Setting
 ****************************************/
-.nav-tabs.green-tabs > li.active > a:focus, 
-.nav-tabs.green-tabs > li.active > a:hover, 
-.nav-tabs.green-tabs > li.active > a{
-	border-bottom-color: #D0D0D0 !important;
-}
-.nav-tabs > li {
-	margin-bottom:5px;
-}
-.nav-tabs.green-tabs > li {
-	display:block;
-	float:none;
+.filter-list li{
+	padding:10px 10px 11px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	span {
+		border: 4px solid #FE8901;
+		height: 35px;
+		line-height: 25px;
+		width: 35px;
+	}
 	
-	> a{
-		margin:0;
-		.radius(3px);
-	}
-	> a:before{
-		display:none;
-	}
 }
-.tab-content .crew-section .details-list-2 span,
-.tab-content .crew-section .details-list span{
-	width:auto;
 }
+
 .thumbnail-wrap .thumbnail{
 	margin-bottom:10px;
-}
 }
 @media (max-width: 767px) {
 /***********************
 	Header Setting
 ************************/
-.header-top{
-	padding:15px 0;
+#header .social-icons	{
+	display:none;
 }
-.logo-wrap{
-	.col-xs-12{
-		padding:0;
-	}
-	
+.home-slider .slider-caption h3{
+	font-size:25px;
 }
+
 .navbar .navbar-nav > li > a{
 	border:none;
 }
@@ -2023,7 +1890,7 @@ h1{
 .navbar-header{
 	float:none;
 	.navbar-toggle{
-		.btn-orange;
+		.theme-btn;
 		span{
 			background: white;
 		}
@@ -2031,18 +1898,14 @@ h1{
 	}
 	
 }
-.navbar-toggle{
-	margin-top:2px;
-	margin-right:0;
+
+.logo{
+	margin-top:10px;
+	width:250px;
 }
 .login-section{
 	padding:0;
 }
-
-.sidebar-section .theme-box{
-	padding:15px 0 10px;
-}
-
 .rtl{
 	.navbar-nav > {
 		li{
@@ -2058,12 +1921,17 @@ h1{
 	}
 
 }
+.home-slider .slider-caption,
+.home-slider .details-wrap{
+	position:static;
+	width:auto;
+	margin:0;
+}
 .icons-list{
 	ul{
 		padding:0;
 	}
 }
-
 /***********************
 	Pagination Setting
 ************************/
@@ -2078,24 +1946,19 @@ h1{
 ************************/
 #sidebar{
 }
+.list-style-bullets,
+.icons-list{
+	text-align:left;
+}
 .sidebar-section{
 	img{
 		margin:0 auto;
 		display:block;
 	}
 }
-.main-content{
-	padding:10px 10px 0;
-	margin:0;
-}
-#main-wrap{
-	padding:0 0 15px;
-}
-
-
 #sidebar,
 #contents{
-	padding:0 !important;
+	padding:0 0 20px !important;
 }
 /***********************
 	footer Setting

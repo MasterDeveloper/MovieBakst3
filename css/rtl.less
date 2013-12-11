@@ -6,6 +6,7 @@
 /* All Things Float Left to Right Here */
 [class^="col-lg-"],[class^="col-md-"],[class^="col-sm-"],[class^="col-xs-"]{float:right;}
 .col-lg-12{float:none;}
+.col-md-12{width:100%;}
 .pull-left{float:right !important;}
 .pull-right{float:left !important;}
 .text-right{text-align: left !important;}
@@ -23,7 +24,6 @@
 .icon-chevron-right:before {content: '\f053';}
 .icon-chevron-left:before { content: "\f054";}
 .navbar-nav{ padding-right:0; > li{ float:right;}}
-.navbar-nav > li{ > a{border-right:1px solid black; border-left: none;} &:first-child{ a{ border-right:none;}}}
 .col-md-6{padding-right:15px;}
 .navbar-toggle{float:left; margin-left:15px;}
 .navbar-header{float: right;}
@@ -34,8 +34,13 @@
 .slider-wrap{direction:ltr; text-align:right;}
 .list-unstyled{padding-right:0;}
 .nav-tabs{padding:0;}
-.nav-tabs > li{float:right;margin-right:0; margin-left:5px;}
-
+.nav-tabs > li{float:right;}
+.search-wrap .input-lg{
+	.radius(0 22px 22px 0) !important;
+}
+.search-wrap .btn-lg{
+	.radius(22px 0 0 22px) !important;
+}
 
 /*  default-theme-for-rtl  */
 @media (max-width: 1200px) {
@@ -48,13 +53,22 @@
 	[class^="col-md-"]{
 		float:right;
 	}
-	#header-left{
-		float:left;
-	}
 	.nav-tabs > li{float:none;margin-right:0; margin-left:0; margin-bottom:10px;}
+.slider-wrap-2{
+	[class^="col-md-"]{
+		float:none;
+	}
 }
 #footer-wrap .footer-nav{
 	padding:0 20px 0 0;
+}
+.search-wrap .input-lg{
+	.radius(0 5px 5px 0) !important;
+}
+.search-wrap .btn-lg{
+	.radius(5px 0 0 5px) !important;
+}
+
 }
 @media (max-width: 767px){
 	#header-left{
@@ -110,11 +124,9 @@
 	padding:0 0 0 10px;
 }
 #footer .social-icons a{
-	margin:0 0 0 5px;
+	margin:0 0 4px;
 }
 .icons-list{
-	padding:0 15px;
-	text-align:right;
 }
 .feature-img{
 	float:right;
